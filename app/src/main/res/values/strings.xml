@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">Gojek_Test_UI</string>
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="klik_cek_riwayat"><![CDATA[Klik & cek riwayat]]></string>
+    <string name="rp12_378">Rp12.378</string>
+    <string name="gopay">gopay</string>
+    <string name="pay">Bayar</string>
+    <string name="top_up">Top Up</string>
+    <string name="explore">Eksplor</string>
+    <string name="hint_search"><![CDATA[Cari layanan, makanan, & tujuan]]></string>
+    <string name="gosend">GoSend</string>
+    <string name="gofood">GoFood</string>
+    <string name="gocar">GoCar</string>
+    <string name="goride">GoRide</string>
+    <string name="others">Lainnya</string>
+    <string name="goclub">GoClub</string>
+    <string name="gopulsa">GoPulsa</string>
+    <string name="gomart">GoMart</string>
+    <string name="message_club">120 XP to your next treasure</string>
+    <string name="gopaylater">gopaylater</string>
+    <string name="tagline_gopay_later">Lebih hemat pake GoPayLater🤩</string>
+    <string name="message_gopay_later">Yuk, belanja di Tokopedia pake GoPay Later dan nikmatin caschbak-nya~</string>
+
+    <string name="title_news">Makin Seru😉</string>
+    <string name="description_news">Sambungin Akun ke Tokopedia, Banyakin Untung</string>
+    <string name="_0">0</string>
+    <string name="missions">Missions</string>
+    <string name="running">Lagi berjalan</string>
+    <string name="active">Lagi aktif</string>
+    <string name="member">Langganan</string>
+    <string name="can_use">Bisa dipakai</string>
+    <string name="vouchers">Vouchers</string>
+    <string name="input_promo_code">Masukan kode promo</string>
+    <string name="title_promo">Promo menarik buat kamu</string>
+    <string name="look_promo">Kiri kanan, Kulihat diskon~ 🤩</string>
+    <string name="see_all">Lihat semua</string>
+
+
+    <string-array name="title_tab">
+        <item>Beranda</item>
+        <item>Promo</item>
+        <item>Pesanan</item>
+        <item>Chat</item>
+    </string-array>
+</resources>

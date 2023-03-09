@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/margin_medium">
+
+    <ImageButton
+        android:id="@+id/btn_go_ride"
+        style="@style/Theme.GojekClone.Icon"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_goride"
+        app:layout_constraintEnd_toStartOf="@+id/btn_go_car"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btn_go_car"
+        style="@style/Theme.GojekClone.Icon"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_gocar"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_go_ride"
+        app:layout_constraintEnd_toStartOf="@+id/btn_go_food"
+        app:layout_constraintStart_toEndOf="@+id/btn_go_ride"
+        app:layout_constraintTop_toTopOf="@+id/btn_go_ride" />
+
+    <ImageButton
+        android:id="@+id/btn_go_food"
+        style="@style/Theme.GojekClone.Icon"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_gofood"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_go_car"
+        app:layout_constraintEnd_toStartOf="@+id/btn_go_send"
+        app:layout_constraintStart_toEndOf="@+id/btn_go_car"
+        app:layout_constraintTop_toTopOf="@+id/btn_go_car" />
+
+    <ImageButton
+        android:id="@+id/btn_go_send"
+        style="@style/Theme.GojekClone.Icon"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_gosend"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_go_food"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_go_food"
+        app:layout_constraintTop_toTopOf="@+id/btn_go_food" />
+
+    <TextView
+        android:id="@+id/tv_go_ride"
+        style="@style/Theme.GojekClone.Text.Menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/goride"
+        app:layout_constraintEnd_toEndOf="@+id/btn_go_ride"
+        app:layout_constraintStart_toStartOf="@+id/btn_go_ride"
+        app:layout_constraintTop_toBottomOf="@+id/btn_go_ride" />
+
+    <TextView
+        android:id="@+id/tv_go_car"
+        style="@style/Theme.GojekClone.Text.Menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gocar"
+        app:layout_constraintEnd_toEndOf="@+id/btn_go_car"
+        app:layout_constraintStart_toStartOf="@+id/btn_go_car"
+        app:layout_constraintTop_toBottomOf="@+id/btn_go_car" />
+
+    <TextView
+        android:id="@+id/tv_go_food"
+        style="@style/Theme.GojekClone.Text.Menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gofood"
+        app:layout_constraintEnd_toEndOf="@+id/btn_go_food"
+        app:layout_constraintStart_toStartOf="@+id/btn_go_food"
+        app:layout_constraintTop_toBottomOf="@+id/btn_go_food" />
+
+    <TextView
+        android:id="@+id/tv_go_send"
+        style="@style/Theme.GojekClone.Text.Menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gosend"
+        app:layout_constraintEnd_toEndOf="@+id/btn_go_send"
+        app:layout_constraintStart_toStartOf="@+id/btn_go_send"
+        app:layout_constraintTop_toBottomOf="@+id/btn_go_send" />
+
+    <ImageButton
+        android:id="@+id/btn_go_mart"
+        style="@style/Theme.GojekClone.Icon"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_gomart"
+        android:layout_marginTop="@dimen/margin_large"
+        app:layout_constraintEnd_toStartOf="@+id/btn_go_pulsa"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_go_ride" />
+
+    <ImageButton
+        android:id="@+id/btn_go_pulsa"
+        style="@style/Theme.GojekClone.Icon"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_gopulsa"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_go_mart"
+        app:layout_constraintEnd_toStartOf="@+id/btn_go_club"
+        app:layout_constraintStart_toEndOf="@+id/btn_go_mart"
+        app:layout_constraintTop_toTopOf="@+id/btn_go_mart" />
+
+    <ImageButton
+        android:id="@+id/btn_go_club"
+        style="@style/Theme.GojekClone.Icon"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_goclub"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_go_pulsa"
+        app:layout_constraintEnd_toStartOf="@+id/btn_others"
+        app:layout_constraintStart_toEndOf="@+id/btn_go_pulsa"
+        app:layout_constraintTop_toTopOf="@+id/btn_go_pulsa" />
+
+    <ImageButton
+        android:id="@+id/btn_others"
+        style="@style/Theme.GojekClone.Icon"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_others"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_go_club"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_go_club"
+        app:layout_constraintTop_toTopOf="@+id/btn_go_club" />
+
+
+    <TextView
+        android:id="@+id/tv_go_mart"
+        style="@style/Theme.GojekClone.Text.Menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gomart"
+        app:layout_constraintEnd_toEndOf="@+id/btn_go_mart"
+        app:layout_constraintStart_toStartOf="@+id/btn_go_mart"
+        app:layout_constraintTop_toBottomOf="@+id/btn_go_mart" />
+
+    <TextView
+        android:id="@+id/tv_go_pulsa"
+        style="@style/Theme.GojekClone.Text.Menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gopulsa"
+        app:layout_constraintEnd_toEndOf="@+id/btn_go_pulsa"
+        app:layout_constraintStart_toStartOf="@+id/btn_go_pulsa"
+        app:layout_constraintTop_toBottomOf="@+id/btn_go_pulsa" />
+
+    <TextView
+        android:id="@+id/tv_go_club"
+        style="@style/Theme.GojekClone.Text.Menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/goclub"
+        app:layout_constraintEnd_toEndOf="@+id/btn_go_club"
+        app:layout_constraintStart_toStartOf="@+id/btn_go_club"
+        app:layout_constraintTop_toBottomOf="@+id/btn_go_club" />
+
+    <TextView
+        android:id="@+id/tv_others"
+        style="@style/Theme.GojekClone.Text.Menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/others"
+        app:layout_constraintEnd_toEndOf="@+id/btn_others"
+        app:layout_constraintStart_toStartOf="@+id/btn_others"
+        app:layout_constraintTop_toBottomOf="@+id/btn_others" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

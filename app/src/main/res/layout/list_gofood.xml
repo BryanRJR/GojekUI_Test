@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="144dp"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/margin_small"
+    android:id="@+id/item_gofood"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="2dp"
+    app:strokeColor="#E8E8E8"
+    app:strokeWidth="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_gofood"
+            android:layout_width="0dp"
+            android:layout_height="107dp"
+            android:importantForAccessibility="no"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/backgrounds/scenic" />
+
+        <TextView
+            android:id="@+id/tv_distance"
+            style="@style/Theme.GojekClone.Text.Menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_small"
+            android:textSize="11sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_gofood"
+            app:layout_constraintBottom_toTopOf="@id/title_gofood"
+            tools:text="0.95km" />
+
+        <TextView
+            android:id="@+id/title_gofood"
+            style="@style/Theme.GojekClone.Text.Subtitle2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_small"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:minLines="2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_distance"
+            app:layout_constraintBottom_toTopOf="@id/tv_rating"
+            tools:text="Tahu Cry Yuk, Cipadu" />
+
+
+        <ImageView
+            android:id="@+id/img_stars"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_small"
+            android:importantForAccessibility="no"
+            android:src="@drawable/ic_stars"
+            app:layout_constraintBottom_toBottomOf="@id/tv_rating"
+            app:layout_constraintEnd_toStartOf="@id/tv_rating"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_rating" />
+
+
+        <TextView
+            android:id="@+id/tv_rating"
+            style="@style/Theme.GojekClone.Text.Menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_small"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="@dimen/margin_small"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/img_stars"
+            app:layout_constraintTop_toBottomOf="@id/title_gofood"
+            android:text="4.8·24rb" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
