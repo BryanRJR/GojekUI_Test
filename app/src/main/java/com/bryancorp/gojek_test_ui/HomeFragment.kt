@@ -1,5 +1,6 @@
 package com.bryancorp.gojek_test_ui
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -10,6 +11,7 @@ import com.bryancorp.gojek_test_ui.adapter.NewsAdapter
 import com.bryancorp.gojek_test_ui.databinding.FragmentHomeBinding
 import com.bryancorp.gojek_test_ui.model.GofoodModel
 import com.bryancorp.gojek_test_ui.model.NewsModel
+import com.bryancorp.gojek_test_ui.profile.ProfileActivity
 
 
 class HomeFragment : Fragment() {
@@ -36,6 +38,11 @@ class HomeFragment : Fragment() {
 
         binding?.rvGofoodHorizontal?.adapter = gofoodAdapter
         binding?.rvNews?.adapter = newsAdapter
+
+        binding?.constraintLayout?.avatarUser?.setOnClickListener {
+            val intent = Intent(context, ProfileActivity::class.java)
+            startActivity(intent)
+        }
 
     }
 

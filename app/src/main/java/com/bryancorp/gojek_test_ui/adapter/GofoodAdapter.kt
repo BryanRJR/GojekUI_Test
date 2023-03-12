@@ -26,6 +26,7 @@ class GofoodAdapter : RecyclerView.Adapter<GofoodAdapter.GofoodViewHolder>() {
         fun bindView(data: GofoodModel, onClickGofood: (GofoodModel) -> Unit) {
             Glide.with(binding.root.context)
                 .load(data.image)
+                .centerCrop()
                 .into(binding.ivGofood)
 
             binding.titleGofood.text = data.title

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PromosFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/const_title_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:outlineAmbientShadowColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:fontFamily="@font/sf_pro_display_bold"
+            android:text="Promos"
+            android:textColor="@color/black"
+            android:textSize="26sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include
+        android:id="@+id/frame_goclub"
+        layout="@layout/goclub_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/const_title_toolbar" />
+
+    <include
+        android:id="@+id/frame_voucher"
+        layout="@layout/card_voucher"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frame_goclub" />
+
+    <TextView
+        android:id="@+id/tv_promos_title_rv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:fontFamily="@font/sf_pro_display_bold"
+        android:text="Promos you can't resist"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frame_voucher" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_promos_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:listitem="@layout/items_promos_horizontal"
+        android:layout_marginTop="10dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_promos_title_rv" />
+
+    <TextView
+        android:id="@+id/tv_top_rated"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Top-rated by other foodies"
+        android:layout_margin="16dp"
+        android:fontFamily="@font/sf_pro_display_bold"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rv_promos_name" />
+
+    <TextView
+        android:id="@+id/tv_sponsored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sponsored"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_top_rated"
+        app:layout_constraintTop_toBottomOf="@+id/tv_top_rated" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_promos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        android:paddingStart="8dp"
+        tools:listitem="@layout/list_promos"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_sponsored" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
