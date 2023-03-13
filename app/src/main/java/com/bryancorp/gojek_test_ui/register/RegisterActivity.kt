@@ -37,6 +37,11 @@ class RegisterActivity : AppCompatActivity() {
                     intentTo(LoginActivity::class.java)
                 }
             }
+
+            btnGoLogin.setOnClickListener {
+                intentTo(LoginActivity::class.java)
+                finish()
+            }
         }
     }
 

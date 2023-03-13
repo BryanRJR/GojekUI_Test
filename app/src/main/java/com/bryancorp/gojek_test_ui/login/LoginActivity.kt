@@ -10,6 +10,7 @@ import com.bryancorp.gojek_test_ui.databinding.ActivityMainBinding
 import com.bryancorp.gojek_test_ui.helper.Constant
 import com.bryancorp.gojek_test_ui.helper.PreferenceHelper
 import com.bryancorp.gojek_test_ui.register.RegisterActivity
+import com.google.android.material.snackbar.Snackbar
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
@@ -32,6 +33,9 @@ class LoginActivity : AppCompatActivity() {
                 sharedPref.put(Constant.PREF_IS_LOGIN, true)
                 Toast.makeText(applicationContext, "Login Berhasil", Toast.LENGTH_LONG).show()
                 intentTo(MainActivity::class.java)
+                finish()
+            } else {
+                Snackbar.make(binding.root, "Terdapat Kesalahan Pada Input Text", Snackbar.LENGTH_LONG).show()
             }
         }
 

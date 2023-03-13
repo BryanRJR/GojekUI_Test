@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.bryancorp.gojek_test_ui.MainActivity
 import com.bryancorp.gojek_test_ui.databinding.ActivityProfileBinding
 import com.bryancorp.gojek_test_ui.helper.Constant
 import com.bryancorp.gojek_test_ui.helper.PreferenceHelper
@@ -31,11 +32,15 @@ class ProfileActivity : AppCompatActivity() {
 
         binding.btnLogout.setOnClickListener {
             sharedPref.clear()
-            Toast.makeText(applicationContext, "Berhasil Logout", Toast.LENGTH_LONG).show()
+            intentTo(ProfileActivity::class.java)
+        }
+    }
+
+    override fun onStart() {
+        super.onStart()
+        if (!sharedPref.getBoolean(Constant.PREF_IS_LOGIN)){
             intentTo(LoginActivity::class.java)
         }
-
-
     }
 
     private fun intentTo(screen: Class<*>){
